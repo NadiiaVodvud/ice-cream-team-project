@@ -10,7 +10,10 @@
   justify-content: $jc;
   align-items: $ai;
 }
-
+@mixin transformbox($tm, $bsh) {
+  transform: $tm;
+  box-shadow: $bsh;
+}
 @mixin mq($range) {
   $mobile: 480px;
   $tablet: 768px;

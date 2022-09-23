@@ -45,6 +45,10 @@
     background-color: #efd478;
     width: 100%;
     border-radius: 24px;
+    &:hover,
+    &:focus {
+      @include transformbox(scale(1.012), 11px 21px 93px -62px #000);
+    }
     @include mq(tablet) {
       padding: 108px 26px 12px;
       width: calc((100% - 32px) / 3);

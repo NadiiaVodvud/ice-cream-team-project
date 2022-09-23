@@ -51,7 +51,11 @@
 }
 
 .contacts-item {
-  border: 1px solid rgba(248, 210, 78, 0.5);
+  border: 1px solid rgba(10, 136, 23, 0.15);
+  &:hover,
+  &:focus {
+    @include transformbox(scale(1.012), 11px 21px 93px -62px #000);
+  }
   @media (max-width: 767px) {
     max-width: 280px;
   }

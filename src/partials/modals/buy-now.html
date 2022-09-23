@@ -1,0 +1,149 @@
+<!-- Modal buy now -->
+<div class="modal modal-buy-now" data-modal="2">
+  <button
+    class="modal__btn-close js-modal-close"
+    type="button"
+    data-modal-close
+  >
+    <svg class="modal__btn-close-icon">
+      <use href="./images/icon.svg#close-modal"></use>
+    </svg>
+  </button>
+
+  <h2 class="modal__title modal-buy-now__title">Buy now</h2>
+
+  <!-- Form -->
+  <form class="form buy-now__form">
+    <ul class="checkbox-list">
+      <li class="checkbox-list__item checkbox">
+        <label class="checkbox__label">
+          <picture>
+            <source
+              srcset="
+                ./images/buy-now-modal1.png    1x,
+                ./images/buy-now-modal1-2x.png 2x
+              "
+              media="(min-width:768px)"
+            />
+            <source
+              srcset="
+                ./images/buy-now-modal1-mob.png    1x,
+                ./images/buy-now-modal1-mob-2x.png 2x
+              "
+              media="(max-width:767px)"
+            />
+            <img
+              class="checkbox__img"
+              src="./images/buy-now-modal1.png"
+              alt="Ice cream balls in a waffel cone"
+            />
+          </picture>
+          <span class="checkbox__img-bg"></span>
+          <input
+            class="checkbox__input visually-hidden"
+            type="checkbox"
+            name="ice-cream"
+          />
+          <span class="checkbox__text-box"> Ice cream </span>
+        </label>
+      </li>
+
+      <li class="checkbox-list__item checkbox">
+        <label class="checkbox__label">
+          <picture>
+            <source
+              srcset="
+                ./images/buy-now-modal2.png    1x,
+                ./images/buy-now-modal2-2x.png 2x
+              "
+              media="(min-width:768px)"
+            />
+            <source
+              srcset="
+                ./images/buy-now-modal2-mob.png    1x,
+                ./images/buy-now-modal2-mob-2x.png 2x
+              "
+              media="(max-width:767px)"
+            />
+            <img
+              class="checkbox__img"
+              src="./images/buy-now-modal2.png"
+              alt="Transparent glass with ice coffee"
+              width="130"
+              height="130"
+            />
+          </picture>
+          <span class="checkbox__img-bg checkbox__img-bg--yellow"></span>
+          <input
+            class="checkbox__input visually-hidden"
+            type="checkbox"
+            name="ice-coffee"
+          />
+          <span class="checkbox__text-box checkbox__text-box--yellow">
+            Ice coffee
+          </span>
+        </label>
+      </li>
+
+      <li class="checkbox-list__item checkbox">
+        <label class="checkbox__label">
+          <picture>
+            <source
+              srcset="
+                ./images/buy-now-modal3.png    1x,
+                ./images/buy-now-modal3-2x.png 2x
+              "
+              media="(min-width:768px)"
+            />
+            <source
+              srcset="
+                ./images/buy-now-modal3-mob.png    1x,
+                ./images/buy-now-modal3-mob-2x.png 2x
+              "
+              media="(max-width:767px)"
+            />
+            <img
+              class="checkbox__img"
+              src="./images/buy-now-modal3.png"
+              alt="A glass of milkshake"
+              width="130"
+              height="130"
+            />
+          </picture>
+          <span class="checkbox__img-bg checkbox__img-bg--brown"></span>
+          <input
+            class="checkbox__input visually-hidden"
+            type="checkbox"
+            name="milkshake"
+          />
+          <span class="checkbox__text-box checkbox__text-box--brown">
+            Milkshake
+          </span>
+        </label>
+      </li>
+    </ul>
+
+    <input
+      class="form__input buy-now__form-input"
+      type="text"
+      name="username"
+      placeholder="Name"
+      required
+    />
+    <input
+      class="form__input buy-now__form-input"
+      type="tel"
+      name="phone"
+      placeholder="Phone"
+      required
+      pattern="^\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})$"
+    />
+    <!-- The pattern see in https://stackoverflow.com/questions/58248441/regex-template-for-ukrainian-phone-numbers -->
+    <textarea
+      class="form__input form__input--multiline buy-now__form-input"
+      name="comment"
+      placeholder="Comment"
+    ></textarea>
+    <button class="form__button button" type="submit">Submit</button>
+  </form>
+</div>

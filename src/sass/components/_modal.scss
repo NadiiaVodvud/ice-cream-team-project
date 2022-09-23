@@ -1,0 +1,154 @@
+@mixin modalPreventOverflow(
+  $actualModalHeightMobile,
+  $actualModalHeightTablet
+) {
+  @media screen and (max-width: 767px) and (max-height: $actualModalHeightMobile),
+    screen and (min-width: 768px) and (max-height: $actualModalHeightTablet) {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(0, 0) scale(0);
+
+    &.active {
+      transform: translate(0, 0) scale(100%);
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity $mainTransitionDuration $mainTransitionTimingFunction,
+    visibility $mainTransitionDuration $mainTransitionTimingFunction;
+
+  overflow-y: scroll;
+  z-index: 20;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+
+  width: 280px;
+
+  background-color: $textColor;
+  border: 2px solid $accentColor;
+  border-radius: 10px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0);
+  transition: opacity $mainTransitionDuration $mainTransitionTimingFunction,
+    visibility $mainTransitionDuration $mainTransitionTimingFunction,
+    transform $mainTransitionDuration $mainTransitionTimingFunction;
+
+  z-index: 30; /* Should be greater than  for .overlay */
+
+  &.active {
+    transform: translate(-50%, -50%) scale(100%);
+  }
+
+  @include mq(tablet) {
+    width: 568px;
+  }
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal__btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // Fix for iphone
+  padding: 0;
+  // Fix for custom cursor
+  // cursor: pointer;
+
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 50%;
+  transition: border-color $mainTransitionDuration $mainTransitionTimingFunction;
+
+  &:hover,
+  &:focus {
+    border-color: $backgroundColor;
+  }
+
+  @include mq(tablet) {
+    top: 20px;
+    right: 20px;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.modal__btn-close-icon {
+  width: 16px;
+  height: 16px;
+  fill: $primaryColor;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
+
+  .modal__btn-close:hover &,
+  .modal__btn-close:focus & {
+    fill: $btn-hoverColor;
+  }
+
+  @include mq(tablet) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.modal__title {
+  font-family: $secondaryFontFamily;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  color: $primaryColor;
+
+  @include mq(tablet) {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}

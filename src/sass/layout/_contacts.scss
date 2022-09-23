@@ -1,0 +1,193 @@
+.contacts {
+  position: relative;
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    @include mq(tablet) {
+      flex-direction: row;
+    }
+  }
+}
+
+.contacts__container {
+  position: absolute;
+  top: -390px;
+  width: 100%;
+  @include mq(tablet) {
+    top: -310px;
+  }
+  @include mq(desktop) {
+    top: -96px;
+  }
+}
+
+.contacts__address {
+  margin-bottom: 32px;
+  @include mq(tablet) {
+    margin-bottom: 60px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 64px;
+  }
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  @include mq(tablet) {
+    flex-direction: row;
+    gap: 16px;
+  }
+  @include mq(desktop) {
+    gap: 32px;
+  }
+}
+
+.contacts-item {
+  border: 1px solid rgba(248, 210, 78, 0.5);
+  @media (max-width: 767px) {
+    max-width: 280px;
+  }
+  flex-basis: calc(100%);
+  padding: 40px 32px;
+  background: #fcfcfc;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  @include mq(tablet) {
+    padding: 40px 24px;
+    flex-basis: calc((100% - 32px) / 3);
+  }
+  @include mq(desktop) {
+    padding: 40px;
+    flex-basis: calc((100% - 64px) / 3);
+  }
+  &__place {
+    display: inline-flex;
+    padding: 0px 15px;
+    border-radius: 4px;
+    background: $accentColor;
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $primaryColor;
+    @include mq(tablet) {
+      border-radius: 6px;
+      margin-bottom: 32px;
+      font-size: 16px;
+      line-height: calc(28 / 16);
+    }
+  }
+  &__box--paddbot {
+    @media (max-width: 767px) {
+      max-width: 220px;
+    }
+    margin-bottom: 24px;
+    @include mq(tablet) {
+      margin-bottom: 26px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 32px;
+    }
+  }
+  &__label {
+    font-style: normal;
+    font-weight: 00;
+    font-size: 12px;
+    line-height: calc(22 / 12);
+    letter-spacing: 0.04em;
+    color: $primaryColor;
+    margin-bottom: 8px;
+    @include mq(tablet) {
+      font-size: 16px;
+      line-height: calc(30 / 16);
+      margin-bottom: 12px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 8px;
+    }
+  }
+  &__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(22 / 12);
+    letter-spacing: 0.04em;
+    color: $extraColor;
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: calc(29 / 16);
+    }
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  &__box--border {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 0px;
+    @include mq(tablet) {
+      gap: 12px;
+      padding: 32px 0px;
+    }
+  }
+  &__title,
+  &__clock {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(22 / 12);
+    color: $primaryColor;
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: calc(30 / 16);
+    }
+  }
+  &__clock {
+    color: #907e82;
+  }
+  &__box--paddtop {
+    margin-top: 24px;
+    @include mq(tablet) {
+      margin-top: 32px;
+    }
+  }
+  &__tel,
+  &__mail {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(18 / 12);
+    color: $primaryColor;
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: calc(29 / 16);
+    }
+  }
+}

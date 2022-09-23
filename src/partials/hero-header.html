@@ -1,0 +1,305 @@
+<header class="header">
+  <div class="container header__container" id="home">
+    <a href="#" class="logo">
+      <picture>
+        <source
+          srcset="./images/logo.png 1x, ./images/logo-2x.png 2x"
+          media="(min-width: 1200px)"
+        />
+
+        <source
+          srcset="./images/logo-tab.png, ./images/logo-tab-2x.png 2x"
+          media="(min-width: 768px)"
+        />
+
+        <source
+          srcset="./images/logo-mob.png 1x, ./images/logo-mob-2x.png 2x"
+          media="(max-width: 767px)"
+        />
+
+        <img
+          class="header__logo"
+          src="./images/logo.png"
+          alt="site logo icecream"
+        />
+      </picture>
+    </a>
+
+    <ul class="header__list-desktop">
+      <li class="header__item-desktop">
+        <a class="header__link-desktop" href="#">Home</a>
+      </li>
+
+      <li class="header__item-desktop">
+        <a class="header__link-desktop" href="#about">How it's made?</a>
+      </li>
+
+      <li class="header__item-desktop">
+        <a class="header__link-desktop" href="#products">Our products</a>
+      </li>
+
+      <li class="header__item-desktop">
+        <a class="header__link-desktop" href="#contacts">Contact</a>
+      </li>
+    </ul>
+
+    <ul class="header__list">
+      <li>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          type="button"
+        >
+          <svg width="32" height="32" aria-label="переключає мобільне меню">
+            <use class="icon-cross" href="./images/icon.svg#menu"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          class="header__button header__button--yellow js-open-modal"
+          data-modal="2"
+        >
+          Buy now<svg width="12" height="12">
+            <use class="button__arrow" href="./images/icon.svg#arrow-btn"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <!--back to home-->
+
+  <a href="#home" class="back-to-home"></a>
+</header>
+
+<!--hero-->
+
+<section class="hero">
+  <div class="container hero__container container--bottom-radius">
+    <div class="hero__wrap hero__wrap--top">
+      <div class="hero__wrap hero__wrap--left">
+        <h1 class="hero__title">
+          ice cream made with <span class="accent">passion</span>
+        </h1>
+        <ul class="hero__list hero__list--left">
+          <li>
+            <a href="#products" class="hero__button hero__button--flex-body"
+              >Products</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="#about"
+              class="hero__button hero__button--without-body hero__button--flex"
+              >How it's made?</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero__wrap hero__wrap--right">
+        <ul>
+          <li class="hero__item hero__item--right">
+            <span>16</span>
+            <p class="hero__text hero__text--after-span">cafes</p>
+          </li>
+          <li class="hero__item hero__item--right">
+            <span>23</span>
+            <p class="hero__text hero__text--after-span">food trucks</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hero__wrap hero__wrap--bottom">
+      <picture class="hero-img hero-img__plate">
+        <source
+          srcset="./images/hero-round.png 1x, ./images/hero-round-2x.png 2x"
+          media="(min-width: 1200px)"
+          width="225"
+          height="225"
+        />
+
+        <source
+          srcset="
+            ./images/hero-round-tab.png    1x,
+            ./images/hero-round-tab-2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+
+        <img
+          src="./images/hero-round-tab.png"
+          alt="plate with icecream"
+          width="152"
+          height="152"
+        />
+      </picture>
+
+      <div class="hero__list hero__list--bottom">
+        <p class="hero__text hero__text--botton">
+          We made ice cream with a delicate taste. Made with milk, cream, sugar
+          and natural stabilizer. Our ice cream is made with love for you.
+        </p>
+
+        <button type="button" class="icon-bottom js-open-modal" data-modal="3">
+          <svg class="icon-bottom_focus" width="40" height="15">
+            <use href="./images/icon.svg#arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <picture class="canvas-bubbles">
+      <source
+        class="canvas-bubbles__desktop"
+        srcset="./images/hero-bgr-dots.png 1x, ./images/hero-bgr-dots-2x.png 2x"
+        media="(min-width: 1200px)"
+      />
+
+      <source
+        class="canvas-bubbles__tablet"
+        srcset="
+          ./images/hero-bgr-dots-tab.png    1x,
+          ./images/hero-bgr-dots-tab-2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+
+      <source
+        class="canvas-bubbles__mobile"
+        srcset="
+          ./images/hero-bgr-dots-mob.png    1x,
+          ./images/hero-bgr-dots-mob-2x.png 2x
+        "
+        media="(max-width: 767px)"
+      />
+
+      <img
+        src="./images/hero-bgr-dots-tab.png"
+        alt="yellow bubbles"
+        width="1200"
+        height="384"
+      />
+    </picture>
+
+    <picture class="canvas-icecream">
+      <source
+        class="canvas-icecream__desktop"
+        srcset="
+          ./images/group-icecream.png    1x,
+          ./images/group-icecream-2x.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+
+      <source
+        class="canvas-icecream__tablet"
+        srcset="
+          ./images/group-icecream-tab.png    1x,
+          ./images/group-icecream-tab-2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+
+      <source
+        class="canvas-icecream__mobile"
+        srcset="
+          ./images/group-icecream-mob.png    1x,
+          ./images/group-icecream-mob-2x.png 2x
+        "
+        media="(max-width: 767px)"
+      />
+
+      <img src="./images/group-icecream-tab.png" alt="icecream" />
+    </picture>
+  </div>
+</section>
+
+<!--mobile_menu-->
+<div class="menu-backdrop js-menu-container" id="mobile-menu">
+  <div class="container menu-mask">
+    <div class="menu-container">
+      <div class="menu-container__wrap">
+        <div class="menu-container__top">
+          <a href="#" class="logo">
+            <picture>
+              <source
+                srcset="./images/logo.png 1x, ./images/logo-2x.png 2x"
+                media="(min-width: 1200px)"
+              />
+
+              <source
+                srcset="./images/logo-tab.png, ./images/logo-tab-2x.png 2x"
+                media="(min-width: 768px)"
+              />
+
+              <source
+                srcset="./images/logo-mob.png 1x, ./images/logo-mob-2x.png 2x"
+                media="(max-width: 767px)"
+              />
+
+              <img
+                class="header__logo"
+                src="./images/logo.png"
+                alt="site logo icecream"
+              />
+            </picture>
+          </a>
+
+          <button class="menu-toggle js-close-menu" type="button">
+            <svg width="32" height="32" aria-label="переключає мобільне меню">
+              <use
+                class="icon-cross"
+                href="./images/icon.svg#close-modal"
+              ></use>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="menu-container__nav">
+          <ul class="menu-container__list">
+            <li class="menu-container__item">
+              <a class="menu-container__link js-close-menu" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="menu-container__item">
+              <a class="menu-container__link js-close-menu" href="#about"
+                >How it's made?</a
+              >
+            </li>
+            <li class="menu-container__item">
+              <a class="menu-container__link js-close-menu" href="#products"
+                >Our products</a
+              >
+            </li>
+            <li class="menu-container__item">
+              <a class="menu-container__link js-close-menu" href="#contacts"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div>
+          <button
+            type="button"
+            class="header__button header__button--mobile js-open-modal js-close-menu"
+            data-modal="2"
+          >
+            Buy now<svg width="12" height="12">
+              <use
+                class="button__arrow"
+                href="./images/icon.svg#arrow-btn"
+              ></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

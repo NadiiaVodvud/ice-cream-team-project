@@ -1,0 +1,92 @@
+.menu {
+  stroke: #ffffff;
+  transition: stroke $mainTransitionDuration $mainTransitionTimingFunction;
+  .icon--hoverfocus:hover & {
+    stroke: $accentColor;
+  }
+  .icon--hoverfocus:focus & {
+    stroke: $accentColor;
+  }
+}
+.arrow--white {
+  fill: $extrabackgroundColor;
+}
+.arrow--hover, .arrow--focus{
+  display: none;
+}
+.arrow, 
+.arrow--white {
+  &.arrow--default {
+    scale: 1;
+    transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
+  }
+  .icon--hoverfocus:hover & {
+    &.arrow--default {
+      transform: scaleX(1.25);
+    }
+  }
+  .icon--hoverfocus:focus & {
+    &.arrow--default {
+      transform: scale(1.25, 1.5);
+  }
+}
+}
+.close {
+  fill: #ffffff;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
+  .icon--hoverfocus:hover & {
+    fill: $accentColor;
+  }
+  .icon--hoverfocus:focus & {
+    fill: $accentColor;
+  }
+}
+
+.close--modal,
+.close--modal20 {
+  fill: $primaryColor;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
+  .icon--hoverfocus:hover & {
+    fill: $accentColor;
+  }
+  .icon--hoverfocus:focus & {
+    fill: $accentColor;
+  }
+}
+
+.cow,
+.ice-crem,
+.weight {
+  fill: #000000;
+}
+
+.facebook,
+.github,
+.telegram {
+  scale: (1);
+  fill: $backgroundColor;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
+   .icon--hoverfocus:hover & {
+    transform: scale(0.9);
+    fill: $extrabackgroundColor;
+  }
+  .icon--hoverfocus:focus & {
+    transform: scale(1.1);
+    fill: $extrabackgroundColor;
+  }
+}
+.footer-soc__icon {
+  scale: 1;
+  fill: $backgroundColor;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction,
+   scale $mainTransitionDuration $mainTransitionTimingFunction;
+  .icon--hoverfocus:hover & {
+    transform: scale(0.9);
+    fill: $extrabackgroundColor;
+  }
+  .icon--hoverfocus:focus & {
+    transform: scale(1.1);
+    fill: $extrabackgroundColor;
+  }
+}

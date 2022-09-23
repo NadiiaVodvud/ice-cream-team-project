@@ -1,0 +1,151 @@
+.footer__container {
+  padding-top: 1101px;
+  padding-bottom: 120px;
+  @include mq(tablet) {
+    padding-top: 381px;
+    padding-bottom: 53px;
+  }
+  @include mq(desktop) {
+    padding-top: 668px;
+    padding-bottom: 45px;
+  }
+}
+
+.footer__container--green {
+  background-color: $backgroundColor;
+}
+
+.footer-main {
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+  @include mq(tablet) {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include mq(desktop) {
+    margin-bottom: 54px;
+  }
+  &__titles {
+    @media (max-width: 767px) {
+      max-width: 256px;
+    }
+    margin-bottom: 39px;
+    @include mq(tablet) {
+      width: 352px;
+      margin-bottom: 40px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 0px;
+      width: 505px;
+    }
+  }
+  &__pretitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $textColor;
+    text-align: left;
+    margin-bottom: 16px;
+    @include mq(tablet) {
+      font-weight: 700;
+      font-size: 26px;
+      line-height: calc(32 / 26);
+      margin-bottom: 9px;
+    }
+    @include mq(desktop) {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: calc(37 / 30);
+      margin-bottom: 9px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: calc(41 / 34);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $textColor;
+    text-align: left;
+    @include mq(tablet) {
+      font-size: 48px;
+      line-height: calc(59 / 48);
+      letter-spacing: 0.06em;
+    }
+    @include mq(desktop) {
+      font-size: 58px;
+      line-height: calc(71 / 58);
+    }
+  }
+  &__contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: calc(22 / 12);
+    text-align: right;
+    color: $primaryColor;
+  }
+  &__tel {
+    color: $textColor;
+  }
+  &__border {
+    position: relative;
+  }
+  &__after-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 160px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(21 / 14);
+    color: #7a7a7a;
+    margin-top: 16px;
+    @include mq(tablet) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      line-height: calc(26 / 14);
+      letter-spacing: 0.02em;
+      margin-top: 14px;
+    }
+    @include mq(desktop) {
+      font-size: 12px;
+      line-height: calc(22 / 12);
+      margin-top: 12px;
+    }
+  }
+}
+
+.footer-soc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+  justify-content: right;
+  margin-bottom: 38px;
+}
+
+.footer-main__border--position {
+  position: absolute;
+  left: -20px;
+  width: calc(100% + 40px);
+  border-bottom: 1px solid #e1e1e1;
+  @include mq(tablet) {
+    left: -32px;
+    width: calc(100% + 64px);
+  }
+  @include mq(desktop) {
+    position: relative;
+    left: 0px;
+    width: 100%;
+  }
+}
